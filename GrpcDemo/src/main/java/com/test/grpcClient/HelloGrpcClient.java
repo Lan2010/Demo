@@ -12,6 +12,9 @@ import net.devh.springboot.autoconfigure.grpc.client.GrpcClient;
 @Service
 public class HelloGrpcClient {
 
+	/**
+	 * 注释驱动
+	 */
 	@GrpcClient("grpc-server")
 	private Channel channel;
 	

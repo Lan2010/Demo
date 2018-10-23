@@ -9,11 +9,17 @@ import com.test.grpc.HelloRequest;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
+/**
+ * grpc客户端 非注释
+ * @author dev-lan
+ * @date:   2018年10月23日 上午11:34:55
+ */
 public class HelloWorldClient {
 
 	private final ManagedChannel channel;
 	private final GreeterGrpc.GreeterBlockingStub blockingStub;
 
+	
 	public HelloWorldClient(String host, int port) {
 		channel = ManagedChannelBuilder.forAddress(host, port).usePlaintext(true).build();
 

@@ -10,6 +10,11 @@ import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
 
+/**
+ * grpc服务端  非注释
+ * @author dev-lan
+ * @date:   2018年10月23日 上午11:35:17
+ */
 public class HelloWorldServer {
 
 	private int port = 50051;
@@ -50,6 +55,7 @@ public class HelloWorldServer {
 		server.blockUntilShutdown();
 	}
 
+	// 实现 定义一个实现服务接口的类 
 	private class GreeterImpl extends GreeterGrpc.GreeterImplBase {
 		public void sayHello(HelloRequest req, StreamObserver<HelloReply> responseObserver) {
 			System.out.println("server:" + req.getName());
